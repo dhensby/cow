@@ -256,11 +256,6 @@ class BuildArchive extends Step
         // Remove development files not needed in the archive package
         $this->log($output, "Remove development files");
         foreach (array("{$path}/{$cmsArchive}", "{$path}/{$frameworkArchive}") as $archivePath) {
-            $this->unlink("{$archivePath}/cms/tests/");
-            $this->unlink("{$archivePath}/framework/tests/");
-            $this->unlink("{$archivePath}/framework/admin/tests/");
-            $this->unlink("{$archivePath}/reports/tests/");
-            $this->unlink("{$archivePath}/siteconfig/tests/");
             $this->unlink("{$archivePath}/framework/docs/");
             if ($repo) {
                 $this->unlink("{$archivePath}/composer.json");
