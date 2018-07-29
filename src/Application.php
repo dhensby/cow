@@ -72,6 +72,9 @@ class Application extends Console\Application
         // Schema commands
         $commands[] = new Commands\Schema\Validate();
 
+        // Repository commands
+        $commands[] = new Commands\Repository\Create();
+
         return $commands;
     }
 }
